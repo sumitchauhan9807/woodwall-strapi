@@ -492,6 +492,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     DemoPdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Description: Schema.Attribute.RichText & Schema.Attribute.Required;
+    Ebook: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Gallery: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
