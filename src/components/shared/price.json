@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_prices",
+  "info": {
+    "displayName": "Price",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "Euro": {
+      "type": "component",
+      "component": "shared.euro",
+      "repeatable": false
+    },
+    "USD": {
+      "type": "component",
+      "component": "shared.usd",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

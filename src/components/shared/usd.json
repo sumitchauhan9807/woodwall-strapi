@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_usds",
+  "info": {
+    "displayName": "USD",
+    "icon": "chartPie"
+  },
+  "options": {},
+  "attributes": {
+    "StripePrice": {
+      "type": "string"
+    },
+    "PayPalPrice": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

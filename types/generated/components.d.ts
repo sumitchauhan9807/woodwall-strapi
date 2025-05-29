@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedEuro extends Struct.ComponentSchema {
+  collectionName: 'components_shared_euros';
+  info: {
+    displayName: 'Euro';
+    icon: 'bell';
+  };
+  attributes: {
+    PayPalPrice: Schema.Attribute.String;
+    StripePrice: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -8,6 +20,18 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedPrice extends Struct.ComponentSchema {
+  collectionName: 'components_shared_prices';
+  info: {
+    displayName: 'Price';
+    icon: 'grid';
+  };
+  attributes: {
+    Euro: Schema.Attribute.Component<'shared.euro', false>;
+    USD: Schema.Attribute.Component<'shared.usd', false>;
   };
 }
 
@@ -62,14 +86,29 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedUsd extends Struct.ComponentSchema {
+  collectionName: 'components_shared_usds';
+  info: {
+    displayName: 'USD';
+    icon: 'chartPie';
+  };
+  attributes: {
+    PayPalPrice: Schema.Attribute.String;
+    StripePrice: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.euro': SharedEuro;
       'shared.media': SharedMedia;
+      'shared.price': SharedPrice;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.usd': SharedUsd;
     }
   }
 }
