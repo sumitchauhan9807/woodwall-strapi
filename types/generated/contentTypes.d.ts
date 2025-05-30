@@ -506,6 +506,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
     Price: Schema.Attribute.Component<'shared.price', false> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    ReleaseDate: Schema.Attribute.Date;
     SubTitle: Schema.Attribute.String & Schema.Attribute.Required;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
