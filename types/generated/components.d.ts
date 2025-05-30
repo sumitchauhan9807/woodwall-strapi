@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface HomeSectionOne extends Struct.ComponentSchema {
+  collectionName: 'components_home_section_ones';
+  info: {
+    displayName: 'Section one';
+    icon: 'collapse';
+  };
+  attributes: {
+    Content: Schema.Attribute.RichText;
+    Headline: Schema.Attribute.String;
+    Image1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Image2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Image3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SharedEuro extends Struct.ComponentSchema {
   collectionName: 'components_shared_euros';
   info: {
@@ -101,6 +116,7 @@ export interface SharedUsd extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'home.section-one': HomeSectionOne;
       'shared.euro': SharedEuro;
       'shared.media': SharedMedia;
       'shared.price': SharedPrice;
