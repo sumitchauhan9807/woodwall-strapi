@@ -1,0 +1,29 @@
+1. User login / reister (backend)
+2. user login register page front end
+3. About seraphin page front end / backend
+4. Books page
+5. Single Book Page
+6. Animations
+
+ 7 JUNE
+============================================================================================================
+
+7. Paymnets
+8. Shipping Address
+9. Logistic Providers (DHL,Fedx,China post)
+
+
+
+
+================================================================================================================
+
+Menu:- Echoes of the veil
+       -> characters
+           -> sub characters
+       
+===============================================================================================================
+
+Home page 
+  -> videos section
+  -> social media links
+  -> 
